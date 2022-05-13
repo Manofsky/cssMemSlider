@@ -1,0 +1,1 @@
+https://manofsky.github.io/cssMemSlider/cssMemSlider/index.html
