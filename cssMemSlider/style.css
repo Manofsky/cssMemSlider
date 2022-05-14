@@ -6,7 +6,7 @@ body {
 
 .container {
   margin: 2rem auto 0 auto;
-  width: 50%;
+  width: 40%;
 
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -55,21 +55,24 @@ img {
 #radioButton1:checked~.images #img1,
 #radioButton2:checked~.images #img2,
 #radioButton3:checked~.images #img3,
-#radioButton4:checked~.images #img4 {
+#radioButton4:checked~.images #img4,
+#radioButton5:checked~.images #img5 {
   z-index: 1;
 }
 
 #radioButton1:checked~.quotes #quote1,
 #radioButton2:checked~.quotes #quote2,
 #radioButton3:checked~.quotes #quote3,
-#radioButton4:checked~.quotes #quote4 {
+#radioButton4:checked~.quotes #quote4,
+#radioButton5:checked~.quotes #quote5 {
   z-index: 1;
 }
 
 #radioButton1:checked~.controls #dot1>.dot,
 #radioButton2:checked~.controls #dot2>.dot,
 #radioButton3:checked~.controls #dot3>.dot,
-#radioButton4:checked~.controls #dot4>.dot {
+#radioButton4:checked~.controls #dot4>.dot,
+#radioButton5:checked~.controls #dot5>.dot {
   background-color: black;
   border: solid 2px rgba(133, 131, 236);
   box-sizing: border-box;
@@ -78,7 +81,8 @@ img {
 #radioButton1,
 #radioButton2,
 #radioButton3,
-#radioButton4 {
+#radioButton4,
+#radioButton5 {
   display: none;
 }
 
