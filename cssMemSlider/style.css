@@ -1,5 +1,11 @@
+body {
+  background-color: rgb(40, 40, 40);
+  color: aquamarine;
+
+}
+
 .container {
-  margin: 0 auto;
+  margin: 2rem auto 0 auto;
   width: 50%;
 
   display: grid;
@@ -19,14 +25,26 @@ img {
   grid-template-columns: repeat(4, 1fr);
 }
 
-#img1,
-#img2,
-#img3,
-#img4 {
+.image {
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 2;
+}
+
+.quotes {
+  min-height: 4em;
+  display: grid;
+  background-color: rgb(40, 40, 40);
+  font-size: 20px;
+}
+
+.quote {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  z-index: -1;
 }
 
 .controls {
@@ -38,6 +56,13 @@ img {
 #radioButton2:checked~.images #img2,
 #radioButton3:checked~.images #img3,
 #radioButton4:checked~.images #img4 {
+  z-index: 1;
+}
+
+#radioButton1:checked~.quotes #quote1,
+#radioButton2:checked~.quotes #quote2,
+#radioButton3:checked~.quotes #quote3,
+#radioButton4:checked~.quotes #quote4 {
   z-index: 1;
 }
 
@@ -73,8 +98,8 @@ img {
 }
 
 .clickArea:hover .dot {
-  background-color: orangered;
-  border: solid 2px orange !important;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: solid 2px rgba(255, 255, 255) !important;
   box-sizing: border-box;
 }
 
