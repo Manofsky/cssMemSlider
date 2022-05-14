@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-row-gap: 1em;
+  user-select: none;
 }
 
 img {
@@ -29,7 +30,8 @@ img {
 }
 
 .controls {
-  text-align: right;
+  display: flex;
+  justify-content: end;
 }
 
 #radioButton1:checked~.images #img1,
@@ -39,10 +41,10 @@ img {
   z-index: 1;
 }
 
-#radioButton1:checked~.controls #dot1,
-#radioButton2:checked~.controls #dot2,
-#radioButton3:checked~.controls #dot3,
-#radioButton4:checked~.controls #dot4 {
+#radioButton1:checked~.controls #dot1>.dot,
+#radioButton2:checked~.controls #dot2>.dot,
+#radioButton3:checked~.controls #dot3>.dot,
+#radioButton4:checked~.controls #dot4>.dot {
   background-color: black;
   border: solid 2px rgba(133, 131, 236);
   box-sizing: border-box;
@@ -55,23 +57,28 @@ img {
   display: none;
 }
 
-.dots {
-  width: 13px;
-  height: 13px;
-  margin: 0 4px;
+.clickArea {
+  padding: 0 10px 20px 10px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
   border-radius: 100%;
-  display: inline-block;
   background-color: rgba(133, 131, 236, 0.6);
 }
 
-.dots:hover {
+.clickArea:hover {
   cursor: pointer;
+}
+
+.clickArea:hover .dot {
   background-color: orangered;
   border: solid 2px orange !important;
   box-sizing: border-box;
 }
 
-.dots:active {
+.clickArea:active .dot {
   background-color: red;
   border: solid 2px red !important;
   box-sizing: border-box;
