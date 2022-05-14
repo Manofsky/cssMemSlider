@@ -32,9 +32,47 @@ img {
   text-align: right;
 }
 
-#radioButton1:checked~#img1,
-#radioButton2:checked~#img2,
-#radioButton3:checked~#img3,
-#radioButton4:checked~#img4 {
+#radioButton1:checked~.images #img1,
+#radioButton2:checked~.images #img2,
+#radioButton3:checked~.images #img3,
+#radioButton4:checked~.images #img4 {
   z-index: 1;
+}
+
+#radioButton1:checked~.controls #dot1,
+#radioButton2:checked~.controls #dot2,
+#radioButton3:checked~.controls #dot3,
+#radioButton4:checked~.controls #dot4 {
+  background-color: black;
+  border: solid 2px rgba(133, 131, 236);
+  box-sizing: border-box;
+}
+
+#radioButton1,
+#radioButton2,
+#radioButton3,
+#radioButton4 {
+  display: none;
+}
+
+.dots {
+  width: 13px;
+  height: 13px;
+  margin: 0 4px;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(133, 131, 236, 0.6);
+}
+
+.dots:hover {
+  cursor: pointer;
+  background-color: orangered;
+  border: solid 2px orange !important;
+  box-sizing: border-box;
+}
+
+.dots:active {
+  background-color: red;
+  border: solid 2px red !important;
+  box-sizing: border-box;
 }
