@@ -17,14 +17,15 @@ body {
   grid-column-end: 3;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  background-color: rgb(40, 40, 40);
 }
 
 .image {
-
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 2;
+  z-index: -1;
 }
 
 img {
@@ -58,6 +59,7 @@ img {
 #radioButton4:checked~.images #img4,
 #radioButton5:checked~.images #img5 {
   z-index: 1;
+  animation: image 1s ease-in-out;
 }
 
 #radioButton1:checked~.quotes #quote1,
@@ -66,6 +68,7 @@ img {
 #radioButton4:checked~.quotes #quote4,
 #radioButton5:checked~.quotes #quote5 {
   z-index: 1;
+  animation: text 1s ease-in-out;
 }
 
 #radioButton1:checked~.controls #dot1>.dot,
@@ -111,6 +114,26 @@ img {
   background-color: red;
   border: solid 2px red !important;
   box-sizing: border-box;
+}
+
+@keyframes image {
+  0% {
+    opacity: .5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes text {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 @media (max-width: 425px) {
