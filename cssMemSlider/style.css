@@ -1,21 +1,15 @@
 body {
   background-color: rgb(40, 40, 40);
   color: aquamarine;
-
 }
 
 .container {
   margin: 2rem auto 0 auto;
   width: 40%;
-
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-row-gap: 1em;
   user-select: none;
-}
-
-img {
-  width: 100%;
 }
 
 .images {
@@ -26,10 +20,15 @@ img {
 }
 
 .image {
+
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 2;
+}
+
+img {
+  width: 100%;
 }
 
 .quotes {
@@ -49,6 +48,7 @@ img {
 
 .controls {
   display: flex;
+  flex-wrap: wrap;
   justify-content: end;
 }
 
@@ -111,4 +111,26 @@ img {
   background-color: red;
   border: solid 2px red !important;
   box-sizing: border-box;
+}
+
+@media (max-width: 425px) {
+  .container {
+    width: 80%;
+    grid-template-columns: 1fr;
+  }
+
+  .controls {
+    justify-content: center;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .quotes {
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  .clickArea {
+    padding: 5px 7px 5px 7px;
+  }
 }
