@@ -36,7 +36,8 @@ img {
   min-height: 4em;
   display: grid;
   background-color: rgb(40, 40, 40);
-  font-size: 20px;
+  font-size: 1.2em;
+  user-select: text;
 }
 
 .quote {
@@ -90,12 +91,12 @@ img {
 }
 
 .clickArea {
-  padding: 0 10px 20px 10px;
+  padding: 0 7px 20px 7px;
 }
 
 .dot {
-  width: 15px;
-  height: 15px;
+  width: 13px;
+  height: 13px;
   border-radius: 100%;
   background-color: rgba(133, 131, 236, 0.6);
 }
