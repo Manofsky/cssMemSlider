@@ -118,13 +118,14 @@ img {
 }
 
 @keyframes image {
-  0% {
-    opacity: .5;
+  from {
+    clip-path: inset(0 0 100% 0);
   }
 
-  100% {
-    opacity: 1;
+  to {
+    clip-path: inset(0 0 0 0);
   }
+
 }
 
 @keyframes text {
